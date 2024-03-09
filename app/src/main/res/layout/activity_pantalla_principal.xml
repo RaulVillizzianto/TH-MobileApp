@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PantallaPrincipal">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/topAppBar"
+            style="@style/Widget.MaterialComponents.Toolbar.Primary"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/appBarColor"
+            app:iconTint="@color/white"
+            app:menu="@menu/top_app_bar"
+
+            app:title="" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="667dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="29dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/textoBienvenido"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:editable="false"
+                    android:ems="10"
+                    android:gravity="start|top"
+                    android:inputType="textMultiLine"
+                    android:paddingLeft="30px"
+                    android:text="Bienvenido "
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:paddingLeft="10dp"
+
+                    android:paddingRight="5dp">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/botonUsuario"
+                        android:layout_width="110dp"
+                        android:layout_height="80dp"
+                        android:contentDescription="icono"
+                        android:pointerIcon="none"
+                        android:scaleType="fitXY"
+                        android:scaleX="1.0"
+                        android:scaleY="1.0"
+                        android:tag="iconButton"
+                        android:text="Usuario"
+                        android:textSize="12sp"
+                        app:cornerRadius="10dp"
+                        app:icon="@drawable/account_circle_fill0_wght400_grad0_opsz24"
+                        app:iconGravity="textTop"
+                        app:iconPadding="20dp"
+                        app:iconSize="20dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+
+                    >
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/botonAgregarDispositivo"
+                        android:layout_width="110dp"
+                        android:layout_height="80dp"
+                        android:contentDescription="icono"
+                        android:pointerIcon="none"
+                        android:scaleType="fitXY"
+                        android:scaleX="1.0"
+                        android:scaleY="1.0"
+                        android:tag="iconButton"
+                        android:text="Agregar Dispositivo"
+                        android:textAlignment="center"
+                        android:textSize="10sp"
+                        app:cornerRadius="10dp"
+                        app:icon="@drawable/monitor_weight_gain_fill0_wght300_grad0_opsz24"
+                        app:iconGravity="textTop"
+                        app:iconSize="20dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/botonEliminarDispositivo"
+                        android:layout_width="110dp"
+                        android:layout_height="80dp"
+                        android:contentDescription="icono"
+                        android:pointerIcon="none"
+                        android:scaleType="fitXY"
+                        android:scaleX="1.0"
+                        android:scaleY="1.0"
+                        android:tag="iconButton"
+                        android:text="Eliminar Dispositivo"
+                        android:textSize="10sp"
+                        app:cornerRadius="10dp"
+                        app:icon="@drawable/monitor_weight_loss_fill0_wght300_grad0_opsz24"
+                        app:iconGravity="textTop"
+                        app:iconSize="20dp" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutDispositivos"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:orientation="horizontal"></LinearLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
